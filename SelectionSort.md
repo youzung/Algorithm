@@ -62,30 +62,27 @@
 
 public class SelectionSort {
 
-	public class SelectionSort {
+	public static void main(String[] args) {
 
-		public static void main(String[] args) {
+		int[] lst = { 4, 9, 7, 1, 3, 6, 5 };
+		int size = lst.length;
+		int smallest;
 
-			int[] lst = { 4, 9, 7, 1, 3, 6, 5 };
-			int size = lst.length;
-			int smallest;
-
-			for (int i = 0; i < size - 1; i++) {
-				smallest = i;
-				for (int j = i + 1; j < size; j++) {
-					if (lst[smallest] > lst[j]) 
-						smallest = j;					
-				}
-
-				int temp = lst[smallest];
-				lst[smallest] = lst[i];
-				lst[i] = temp;
+		for (int i = 0; i < size - 1; i++) {
+			smallest = i;
+			for (int j = i + 1; j < size; j++) {
+				if (lst[smallest] > lst[j])
+					smallest = j;
 			}
 
-			System.out.println(Arrays.toString(lst));
+			int temp = lst[smallest];
+			lst[smallest] = lst[i];
+			lst[i] = temp;
 		}
 
+		System.out.println(Arrays.toString(lst));
 	}
+
 }
 
 ```
