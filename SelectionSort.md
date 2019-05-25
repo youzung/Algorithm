@@ -1,5 +1,4 @@
- ## Selection Sort &#128290;
-
+ ## Selection Sort
 > 선택정렬  알고리즘
 
 
@@ -15,6 +14,7 @@
   ```
 
   
+  
 
 - 자바에서 간단하게 정렬하는 법
 
@@ -24,6 +24,9 @@
   System.out.println(Arrays.toString(list));
   ```
 
+  '
+  '
+  
   
 
 - 선택정렬(Selection sort) 과정 
@@ -35,8 +38,10 @@
   (첫번째 인덱스에 있는 숫자가 가장 작은 숫자가 있는 인덱스로 가게된다.)
 
   ​			**1**	9	7	**4**	3	6	5		// 1과 4 바꾸기
+  
 
   이런 식으로 정렬될때까지 반복한다.
+  
 
   ​			1	**3**	7	4	**9**	6	5		// 3과 9 바꾸기
 
@@ -50,32 +55,37 @@
 
 
 
-		> Java 코드
+
+- Java 코드
 
 ```java
 
 public class SelectionSort {
 
-	public static void main(String[] args) {
-		int[] lst = {4,9,7,1,3,6,5};
-		int size = lst.length;
-        int smallest;
-      
-        for(int i=0; i<size-1; i++){ 
-            smallest = i;
-            for(int j=i+1; j<size; j++){
-                if(lst[smallest] > lst[j]){
-                    smallest = j;
-                }
-            }
-            int temp = lst[smallest];
-            lst[smallest] = lst[i];
-            lst[i] = temp;
-        }
+	public class SelectionSort {
 
-	    System.out.println(Arrays.toString(lst));
+		public static void main(String[] args) {
+
+			int[] lst = { 4, 9, 7, 1, 3, 6, 5 };
+			int size = lst.length;
+			int smallest;
+
+			for (int i = 0; i < size - 1; i++) {
+				smallest = i;
+				for (int j = i + 1; j < size; j++) {
+					if (lst[smallest] > lst[j]) 
+						smallest = j;					
+				}
+
+				int temp = lst[smallest];
+				lst[smallest] = lst[i];
+				lst[i] = temp;
+			}
+
+			System.out.println(Arrays.toString(lst));
+		}
+
 	}
-
 }
 
 ```
