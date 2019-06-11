@@ -12,12 +12,12 @@ public class Baek_9012 {
 		 BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	     int caseNum = Integer.parseInt(br.readLine());
 
-		boolean isVps; 
+		boolean chk; 
 		char vps;
 		String input;
 		
 		for (int i = 0; i < caseNum; i++) {
-			isVps = true;
+			chk = true;
 			input = br.readLine();
 			Stack<Character> st = new Stack<>();
 			
@@ -30,15 +30,15 @@ public class Baek_9012 {
 					if(!st.isEmpty()) {
 						st.pop();
 					}else {
-						isVps = false;
+						chk = false;
 						break;
 					}
 				}
 			}
 			if(!st.isEmpty())
-				isVps = false;
+				chk = false;
 			
-			if(isVps)
+			if(chk)
 				System.out.println("YES");
 			else
 				System.out.println("NO");
